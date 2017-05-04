@@ -1,7 +1,7 @@
 package com.gildedrose;
 
-import com.gildedrose.items.Item;
-import com.gildedrose.items.ItemGeneric;
+import com.items.Item;
+import com.items.ItemGeneric;
 import java.util.Arrays;
 
 class GildedRose {

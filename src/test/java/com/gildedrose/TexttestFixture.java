@@ -1,10 +1,10 @@
 package com.gildedrose;
 
-import com.gildedrose.items.AgingItem;
-import com.gildedrose.items.ConjuredItem;
-import com.gildedrose.items.EventItem;
-import com.gildedrose.items.Item;
-import com.gildedrose.items.LegendaryItem;
+import com.items.AgingItem;
+import com.items.ConjuredItem;
+import com.items.EventItem;
+import com.items.Item;
+import com.items.LegendaryItem;
 
 public class TexttestFixture {
     public static void main(String[] args) {

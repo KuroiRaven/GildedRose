@@ -3,23 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.gildedrose.items;
+package com.items;
 
 /**
  *
  * @author damien.faraone
  */
-public class LegendaryItem extends ItemGeneric{
-    public LegendaryItem(String name, int sellIn, int quality) {
+public class AgingItem extends ItemGeneric{
+
+    public AgingItem(String name, int sellIn, int quality) {
         super(name, sellIn, quality);
     }
-    
-    public void updtQuality(){
-        this.quality = 80;
+
+    @Override
+    public void updtQuality() {
+        if(quality < MAX_QUALITY){
+            quality+=DECAY;  
+        }
     }
     
-    public void updtSellIn(){
-        this.sellIn = 50;
-    }
+    
     
 }

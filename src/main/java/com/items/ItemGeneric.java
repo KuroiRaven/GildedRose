@@ -19,21 +19,33 @@ public class ItemGeneric extends Item {
         super(name, sellIn, quality);
     }
     
+    protected boolean overMaxQuality(int quality){
+        return quality > MAX_QUALITY;
+    }
+    
+    protected boolean underMinQuality(int quality){
+        return quality < MIN_QUALITY;
+    }
+    
+    protected boolean underMinSellin(int sellIn){
+        return sellIn < MIN_SELLIN;
+    }
+    
     public void updtQuality(){
         if(this.sellIn == 0){
-            if(quality-(DECAY*2)>=0){
+            if(!underMinQuality(quality-(DECAY*2))){
                 quality-=(DECAY*2);
             }
         }
         else{
-            if(quality-DECAY >=0){
+            if(!underMinQuality(quality-DECAY)){
                 this.quality-=DECAY;   
             }
         }
     }
     
     public void updtSellIn(){
-        if(sellIn-DECAY >=MIN_SELLIN){
+        if(!underMinSellin(sellIn-DECAY)){
             this.sellIn-=DECAY;   
         }
     }

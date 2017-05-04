@@ -5,12 +5,10 @@ import com.items.ItemGeneric;
 import java.util.Arrays;
 
 class GildedRose {
-    Item[] items;
-    String[] legendary;
+    ItemGeneric[] items;
     
-    public GildedRose(Item[] items) {
+    public GildedRose(ItemGeneric[] items) {
         this.items = items;
-        this.legendary[1] = "Sulfuras, Hand of Ragnaros";
     }
 
     public void updateQuality() {

@@ -1,20 +1,22 @@
 package com.gildedrose;
 
+import com.gildedrose.GildedRose;
 import com.items.AgingItem;
 import com.items.ConjuredItem;
 import com.items.EventItem;
 import com.items.Item;
+import com.items.ItemGeneric;
 import com.items.LegendaryItem;
 
 public class TexttestFixture {
     public static void main(String[] args) {
         System.out.println("OMGHAI!");
 
-        Item[] items = new Item[] {
-                new Item("+5 Dexterity Vest", 10, 20), //
-                new AgingItem("Aged Brie", 2, 0), //
-                new Item("Elixir of the Mongoose", 5, 7), //
-                new LegendaryItem("Sulfuras, Hand of Ragnaros", 0, 80), //
+        ItemGeneric[] items = new ItemGeneric[] {
+                new ItemGeneric("+5 Dexterity Vest", 10, 20), 
+                new AgingItem("Aged Brie", 2, 0), 
+                new ItemGeneric("Elixir of the Mongoose", 5, 7), 
+                new LegendaryItem("Sulfuras, Hand of Ragnaros", 0, 80), 
                 new LegendaryItem("Sulfuras, Hand of Ragnaros", -1, 80),
                 new EventItem("Backstage passes to a TAFKAL80ETC concert", 15, 20),
                 new EventItem("Backstage passes to a TAFKAL80ETC concert", 10, 49),
@@ -22,6 +24,7 @@ public class TexttestFixture {
                 // this conjured item does not work properly yet
                 new ConjuredItem("Conjured Mana Cake", 3, 6) };
 
+                System.out.print("test");
         GildedRose app = new GildedRose(items);
 
         int days = 2;

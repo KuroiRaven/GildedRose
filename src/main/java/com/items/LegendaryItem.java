@@ -19,7 +19,7 @@ public class LegendaryItem extends ItemGeneric{
     }
     
     public void updtSellIn(){
-        this.sellIn = 50;
+        this.sellIn = sellIn;
     }
     
 }

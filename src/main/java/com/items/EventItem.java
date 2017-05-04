@@ -24,11 +24,11 @@ public class EventItem extends ItemGeneric{
         if(sellIn == END_EVENT){
             quality = 0;
         }else if(sellIn <= LAST_MINUTE){
-            quality += DECAY*3;
+            quality += !overMaxQuality(quality+DECAY*3)?DECAY*3:MAX_QUALITY-quality;
         }else if(sellIn <=NEAR_LAST){
-            quality += DECAY*2;
+            quality += !overMaxQuality(quality+DECAY*2)?DECAY*2:MAX_QUALITY-quality;
         }else{
-            super.updtQuality();
+            quality += !overMaxQuality(quality+DECAY)?DECAY:MAX_QUALITY-quality;
         }
     }
     
